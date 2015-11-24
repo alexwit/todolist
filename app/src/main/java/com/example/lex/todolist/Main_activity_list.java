@@ -31,7 +31,6 @@ public class Main_activity_list extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity_list);
-
         readItems();
 
         list = (ListView) findViewById(R.id.list);
@@ -65,12 +64,6 @@ public class Main_activity_list extends Activity {
         }
     }
 
-//    public void mouseClick(View view) {
-//        Intent i = new Intent(Main_activity_list.this, side_activity.class);
-//        startActivity(i);
-//    }
-
-
     public void onAddItem(View v) {
         EditText inputAdd = (EditText) findViewById(R.id.inputAdd);
         String itemText = inputAdd.getText().toString();
@@ -89,8 +82,6 @@ public class Main_activity_list extends Activity {
                         }
                 });
     }
-
-
 
     public void removeListViewListener() {
         list.setOnItemLongClickListener(
